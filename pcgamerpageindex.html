@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Montage d'un PC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
+
+    body {
+      color: white;
+      height: 100vh;
+      overflow-x: hidden;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
+                  url('wp4833960.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      text-shadow: 0 0 20px rgba(0,255,255,0.7);
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 20px;
+      transition: 0.3s;
+      box-shadow: 0 0 15px rgba(0,255,255,0.2);
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 0 25px rgba(0,255,255,0.6);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 15px;
+    }
+
+    .card h2 {
+      margin-bottom: 10px;
+      color: #00ffff;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      opacity: 0.85;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.8rem;
+      opacity: 0.6;
+    }
+
+    .wldbtn {
+    
+      margin-left: 850px;
+      
+    }
+
+    a{
+      color: rgb(0, 0, 0);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1> les composants nécessaires pour monter son PC Gaming</h1>
+  <p>Guide étape par étape</p>
+  <button class=""><a href="pageproject2.index.html"> <h2> ACCEUIL </h2></a></button>
+</header>
+
+<section class="container">
+
+  <div class="card">
+    <img src="https://www.config-gamer.fr/media/k2/items/cache/7af11f0818f11069c36aea151a232d38_L.jpg" alt="Carte mère">
+    <h2>Carte mère</h2>
+    <p>La base de ton ordinateur. Elle relie tous les composants entre eux.</p>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea" alt="Processeur">
+    <h2>Processeur (CPU)</h2>
+    <p>Le cerveau de la machine. Il exécute toutes les instructions.</p>
+  </div>
+
+  <div class="card">
+    <img src="https://www.maconfigpc.fr/wp-content/uploads/2024/06/barrettes-memoire-ram-pour-pc-gamer.webp" alt="RAM">
+    <h2>Mémoire RAM</h2>
+    <p>Permet de stocker temporairement les données pour un accès rapide.</p>
+  </div>
+
+  <div class="card">
+    <img src="https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/graphic-cards/50-series/rtx-5090/geforce-rtx-5090-learn-more-og-1200x630.jpg" alt="Carte graphique">
+    <h2>Carte graphique</h2>
+    <p>Indispensable pour les jeux et le rendu visuel haute performance.</p>
+  </div>
+
+  <div class="card">
+    <img src="https://www.justgeek.fr/wp-content/uploads/2024/09/calculateur-puissance-alimentation-pc.webp" alt="Alimentation">
+    <h2>Alimentation</h2>
+    <p>Fournit l'énergie à tous les composants du PC.</p>
+  </div>
+
+  <div class="card">
+    <img src="https://www.planetepc.fr/wp-content/uploads/2019/01/meilleur-boitier-pc-moyen-tour-1024x576.jpg" alt="Boîtier">
+    <h2>Boîtier</h2>
+    <p>Protège les composants et assure une bonne ventilation.</p>
+  </div>
+
+</section>
+<button class="wldbtn"><a href="montageindex.html"> <h2> PASSER AU MONTAGE </h2></a></button>
+<footer>
+  <p>© 2026 - Guide montage PC </p>
+</footer>
+
+</body>
+</html>

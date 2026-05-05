@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Montage PC Étape par Étape</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Orbitron', sans-serif; }
+
+    body {
+      background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
+      color: white;
+    }
+
+    header {
+      text-align:center;
+      padding:60px 20px;
+    }
+
+    header h1 {
+      font-size:3rem;
+      color:#00ffe7;
+      text-shadow:0 0 20px #00ffe7;
+    }
+
+    .timeline {
+      position:relative;
+      max-width:1000px;
+      margin:40px auto;
+      padding:20px;
+    }
+
+    .timeline::after {
+      content:'';
+      position:absolute;
+      width:4px;
+      background:#00ffe7;
+      top:0;
+      bottom:0;
+      left:50%;
+      margin-left:-2px;
+      box-shadow:0 0 15px #00ffe7;
+    }
+
+    .step {
+      padding:20px;
+      position:relative;
+      width:50%;
+    }
+
+    .step img {
+      width:100%;
+      border-radius:15px;
+      margin-top:10px;
+    }
+
+    .step .content {
+      background:rgba(255,255,255,0.05);
+      padding:20px;
+      border-radius:15px;
+      backdrop-filter:blur(10px);
+      box-shadow:0 0 15px rgba(0,255,231,0.3);
+    }
+
+    .step:nth-child(odd) {
+      left:0;
+    }
+
+    .step:nth-child(even) {
+      left:50%;
+    }
+
+    .step::before {
+      content:'';
+      position:absolute;
+      top:20px;
+      width:20px;
+      height:20px;
+      border-radius:50%;
+      background:#00ffe7;
+      box-shadow:0 0 10px #00ffe7;
+      z-index:1;
+    }
+
+    .step:nth-child(odd)::before {
+      right:-10px;
+    }
+
+    .step:nth-child(even)::before {
+      left:-10px;
+    }
+
+    footer {
+      text-align:center;
+      padding:30px;
+      opacity:0.6;
+    }
+
+    @media screen and (max-width:768px) {
+      .timeline::after { left:20px; }
+      .step { width:100%; padding-left:50px; }
+      .step:nth-child(even) { left:0; }
+      .step::before { left:10px !important; }
+    }
+    a{
+color: black;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Passon au montage du PC - Étapes</h1>
+  <button><a href="pcgamerpageindex.html"> <h2> RETOUR </h2></a></button>
+</header>
+
+<section class="timeline">
+
+  <div class="step">
+    <div class="content">
+      <h2>1. Installer le CPU</h2>
+      <p>Place le processeur sur la carte mère en alignant les repères indiquer dessus </p>
+      <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea">
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="content">
+      <h2>2. Ajouter la RAM</h2>
+      <p>Insère les barrettes dans les slots prévus jusqu'au clic il y a un detrompeur pour bien se reperer</p>
+      <img src="https://media.kingston.com/kingston/opengraph/ktc-opengraph-blog-gaming-the-ultimate-ram-guide-for-gamers.jpg">
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="content">
+      <h2>3. Fixer la carte mère</h2>
+      <p>Visse la carte mère dans le boîtier avec les vis fourni</p>
+      <img src="https://www.di-links.com/wp-content/uploads/2024/10/carte-mere-msi-gaming-quel-modele-choisir-1730104648.jpg">
+    </div>
+  </div>
+
+<div class="step">
+    <div class="content">
+      <h2>4. Installer le ventirad ou water-cooling</h2>
+      <p>Placer le sur le processeur et viser avec les vis donner</p>
+      <img src="https://lescahiersdudebutant.fr/wp-content/uploads/2019/12/watercooling-aio.jpg">
+    </div>
+  </div>
+
+
+
+
+  <div class="step">
+    <div class="content">
+      <h2>5. Installer l'alimentation</h2>
+      <p>Place l'alimentation en bas ou en haut du boîtier en fonction du boitier et viser la</p>
+      <img src="https://mzexpos.com/wp-content/uploads/2025/12/Quelle-alimentation-pour-votre-PC-gamer-Le-guide-ultime.jpg">
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="content">
+      <h2>6. Ajouter la carte graphique</h2>
+      <p>Insère la carte graphique dans le port PCI-Express de la carte mere</p>
+      <img src="https://tse4.mm.bing.net/th/id/OIP.e4OThjP5C6Yo3BEnjzXMqwHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3">
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="content">
+      <h2>7. Brancher les câbles</h2>
+      <p>Relie tous les câbles (alimentation, ventilateurs,) il y a tout d'indiquer sur la notice de la carte mere</p>
+      <img src="https://media.moderngamer.com/wp-content/uploads/2023/03/Guide-To-Internal-PC-Cable-Management.jpg">
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  <p>WALID Guide - Montage PC</p>
+</footer>
+
+</body>
+</html>

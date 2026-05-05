@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Collection WLD</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial, Helvetica, sans-serif;}
+body{
+    background: linear-gradient(120deg,#0a0a0a,#1c1c1c);
+    color:white;
+    min-height:100vh;
+}
+
+/* HEADER */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 60px;
+}
+.logo{font-size:28px;font-weight:bold;letter-spacing:4px;}
+nav a{margin:0 15px;text-decoration:none;color:white;opacity:0.7;transition:0.3s;}
+nav a:hover{opacity:1;}
+.cart{background:white;color:black;padding:10px 20px;border-radius:20px;font-weight:bold;}
+
+/* HERO */
+.hero{
+    text-align:center;
+    padding:60px 0 40px 0;
+}
+.hero h1{
+    font-size:42px;
+    margin-bottom:10px;
+}
+.hero p{opacity:0.7;font-size:18px;}
+
+/* COLLECTION GRID */
+.collection{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap:30px;
+    padding:40px 80px;
+}
+
+/* CARD */
+.card{
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(20px);
+    border-radius:25px;
+    border:1px solid rgba(255,255,255,0.1);
+    padding:20px;
+    text-align:center;
+    transition: transform 0.3s;
+    cursor:pointer;
+    position:relative;
+}
+.card:hover{
+    transform: translateY(-10px) scale(1.05);
+}
+
+/* IMAGE 3D BOTTLE */
+.card img{
+    width:120px;
+    margin-bottom:15px;
+    transition: transform 0.3s;
+}
+
+/* NAME & DESCRIPTION */
+.card h3{margin-bottom:8px;font-size:18px;}
+.card p{opacity:0.7;font-size:14px;margin-bottom:10px;}
+
+/* BUTTON */
+.card button{
+    padding:10px 25px;
+    border:none;
+    border-radius:25px;
+    background:white;
+    color:black;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+.card button:hover{
+    transform:scale(1.1);
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:40px;
+    opacity:0.4;
+}
+
+/* ANIMATION FLOAT */
+.card img{
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{transform: translateY(0);}
+    50%{transform: translateY(-10px);}
+    100%{transform: translateY(0);}
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">WLD</div>
+    <nav>
+        <a href="index.html">Accueil</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>DOC  WLD</h1>
+    <p>doc infaillible !</p>
+</section>
+
+<section class="collection">
+    <!-- 20 parfums -->
+    <div class="card">
+        <img src="image/logo-GLPI-100-white.png" alt="Parfum 1">     
+        <h3>GLPI
+        </h3>
+        <p>reussir glpi.
+        </p>
+
+         <a href="page2.index.html"><button onclick="addCart()">commencer</button></a>
+    </div>
+    <div class="card">
+        <img src="image/Zabbix--Streamline-Svg-Logos.svg" alt="Parfum 2">
+        <h3>ZABBIX</h3>
+        <p>reussir zabbix.</p>
+         <a href="zabbix.index.html"><button onclick="addCart()">commencer</button></a>
+    </div>
+    <div class="card">
+        <img src="image/e23c212a4a94449a5cbda756b6e05364.png" alt="Parfum 3">
+        <h3>MYSQL</h3>
+        <p>reussir mysql.</p>
+         <a href="mysql2.index.html"><button onclick="addCart()">commencer</button></a>
+    </div>
+   
+</section>
+
+<footer>
+© 2026 documentation WLD
+</footer>
+
+<script>
+let cart = 0;
+function addCart(){
+    cart++;
+    document.getElementById("cart").innerText = cart;
+}
+

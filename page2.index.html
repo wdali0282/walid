@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GLPI - WALID</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+body{
+font-size:16px;
+font-family:sans-serif;
+line-height:1.6;
+background-image:url("photo/windowss.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+/* HEADER */
+
+.topbar{
+background:#fff;
+padding:20px;
+box-shadow:0 4px 30px rgba(0,0,0,0.2);
+text-align:center;
+}
+
+.topbar nav{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+margin-bottom:10px;
+}
+
+.topbar nav a{
+text-decoration:none;
+color:#9f9f9f;
+font-weight:bold;
+}
+
+.topbar nav a:hover{
+color:#000;
+}
+
+/* CONTENU PRINCIPAL */
+
+.container{
+display:flex;
+max-width:1200px;
+margin:auto;
+padding:20px;
+gap:20px;
+}
+
+/* ARTICLE */
+
+.main{
+flex:3;
+background:#fff;
+padding:20px;
+border-radius:6px;
+}
+
+.article-img img{
+width:15%;
+height:auto;
+margin-bottom:20px;
+}
+
+.article-date{
+color:rgba(0,0,0,.6);
+margin-bottom:10px;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+flex:1;
+background:#fbfbfb;
+padding:20px;
+border-radius:6px;
+}
+
+.sidebar-title{
+font-size:22px;
+margin-bottom:10px;
+}
+
+.sidebar ul{
+list-style:none;
+line-height:2;
+}
+
+.sidebar a{
+text-decoration:none;
+color:#555;
+}
+
+.sidebar a:hover{
+text-decoration:underline;
+}
+
+/* TEXTE */
+
+h2{
+margin-top:10px;
+margin-bottom:10px;
+}
+
+h3{
+margin-top:15px;
+}
+
+h4{
+color:blueviolet;
+word-break:break-word;
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+.container{
+flex-direction:column;
+padding:10px;
+}
+
+.topbar nav{
+flex-direction:column;
+gap:10px;
+}
+
+.main{
+width:100%;
+}
+
+.sidebar{
+width:100%;
+}
+
+h1{
+font-size:22px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="topbar">
+
+<nav>
+<a href="index.html">Accueil</a>
+<a href="mysql2.index.html">MYSQL</a>
+</nav>
+
+<h1>GLPI - Dali Walid</h1>
+
+</header>
+
+
+<div class="container">
+
+<main class="main">
+
+<div class="article-img">
+<img src="image/logo-GLPI-100-black.png">
+</div>
+
+<h2>INSTALLATION DU GLPI</h2>
+
+<div class="article-date">pour ubuntu 24.04</div>
+
+<h3>MYSQL doit être installé !!!</h3>
+
+<h3>Mise à jour des packages on c'est jamais</h3>
+<h4>sudo apt update</h4>
+
+<h3>Téléchargement de GLPI</h3>
+
+<h4>
+sudo apt-get -y install wget 
+export VER="10.0.11" 
+wget https://github.com/glpi-project/glpi/releases/download/$VER/glpi-$VER.tgz
+</h4>
+
+<h3>Décompression</h3>
+<h4>tar xvf glpi-$VER.tgz</h4>
+
+<h3>Déplacer GLPI</h3>
+<h4>sudo mv glpi /var/www/html</h4>
+
+<h3>Droits Apache</h3>
+<h4>sudo chown -R www-data:www-data /var/www/html/glpi</h4>
+
+<h3>Redémarrer Apache</h3>
+<h4>systemctl restart apache2</h4>
+
+<h2>Accéder à GLPI</h2>
+
+<h3>http://IP_DE_VOTRE_SERVEUR/glpi</h3>
+
+</main>
+
+
+<aside class="sidebar">
+
+<div class="sidebar-title">Navigation</div>
+
+<ul>
+<li><a href="index.html">Accueil</a></li>
+<li><a href="mysql2.index.html">Installation MYSQL</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+
+</aside>
+
+</div>
+
+</body>
+</html>

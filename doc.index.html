@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Collection WLD</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+height:100vh;
+background:linear-gradient(120deg,#0a0a0a,#1c1c1c);
+color:white;
+overflow:hidden;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:30px 80px;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+letter-spacing:4px;
+}
+
+nav a{
+margin:0 15px;
+text-decoration:none;
+color:white;
+opacity:0.7;
+transition:0.3s;
+}
+
+nav a:hover{
+opacity:1;
+}
+
+.cart{
+background:white;
+color:black;
+padding:10px 20px;
+border-radius:20px;
+font-weight:bold;
+}
+
+/* HERO */
+
+.hero{
+display:flex;
+justify-content:center;
+align-items:center;
+height:80vh;
+}
+
+.glass{
+
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+gap:40px;
+
+width:1100px;
+padding:50px;
+
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(20px);
+
+border-radius:30px;
+border:1px solid rgba(255,255,255,0.1);
+
+}
+
+/* LEFT */
+
+.left h2{
+font-size:38px;
+margin-bottom:10px;
+}
+
+.left p{
+opacity:0.6;
+}
+
+/* CENTER */
+
+.center{
+display:flex;
+justify-content:center;
+align-items:center;
+position:relative;
+perspective:1000px;
+}
+
+.center img{
+width:240px;
+transition:0.3s;
+z-index:2;
+}
+
+/* bulles */
+
+.bubble{
+position:absolute;
+width:280px;
+height:280px;
+border-radius:50%;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(20px);
+}
+
+.small{
+width:120px;
+height:120px;
+top:0;
+right:40px;
+}
+
+/* RIGHT */
+
+.right h3{
+font-size:30px;
+margin-bottom:20px;
+}
+
+.right p{
+opacity:0.7;
+margin-bottom:25px;
+}
+
+.buy{
+background:white;
+border:none;
+padding:12px 30px;
+border-radius:30px;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+.buy:hover{
+transform:scale(1.1);
+}
+
+/* footer */
+
+footer{
+position:absolute;
+bottom:20px;
+width:100%;
+text-align:center;
+opacity:0.4;
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+
+<div class="logo">WLD</div>
+
+<nav>
+<a href="index.html">Acceuil
+</a>
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<div class="glass">
+
+<div class="left">
+<h2>DOC WLD</h2>
+<p>dali walid</p>
+</div>
+
+
+<div class="center">
+
+<div class="bubble"></div>
+<div class="bubble small"></div>
+
+<img src="image/b4ffd535a0665b41f728d4c1cd05bfdf.png" id="perfume">
+
+</div>
+
+
+<div class="right">
+
+<h3>WLD</h3>
+
+<p>
+reussir son ccf
+</p>
+
+
+    <a href="page1.index.html">
+        <button class="buy">commencer</button>
+    </a>
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 documentation WLD
+</footer>
+
+
+<script>
+
+/* effet 3D souris */
+
+const perfume = document.getElementById("perfume");
+
+document.addEventListener("mousemove",(e)=>{
+
+let x = (window.innerWidth/2 - e.pageX)/25;
+let y = (window.innerHeight/2 - e.pageY)/25;
+
+perfume.style.transform =
+`rotateY(${x}deg) rotateX(${y}deg) scale(1.05)`;
+
+});
+
+
+/* animation flottante */
+
+setInterval(()=>{
+
+perfume.style.transform += " translateY(-5px)"
+
+setTimeout(()=>{
+perfume.style.transform += " translateY(5px)"
+},500)
+
+},1000)
+
+
+/* panier */
+
+let cart = 0;
+
+function addCart(){
+
+cart++;
+
+document.getElementById("cart").innerText = cart;
+
+}
+
+</script>
+
+</body>
+</html>
